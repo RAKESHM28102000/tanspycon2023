@@ -1,0 +1,44 @@
+<%- include("header");%>
+<section id="report">
+        <div class="container-fluid" >
+          <h3 >Form</h3>
+          <div class="container form-class">
+          <form  class="form" action="/form" method="post">
+            <div>
+            <label class="form-label">Name</label>
+            <input  type="text" name="name"  class="form-control" placeholder="name"></input>
+            </div>
+            <br><hr>
+          <div>
+            <label class="form-label" >EmailId</label>
+            <input  type="email" name="email"  class="form-control" placeholder="email id"/>
+          </div>
+          <br><hr>
+          <div>
+            <label class="form-label" >MobileNo</label>
+            <input  type="number" name="mobileno"  class="form-control" placeholder="Mobile Number"/>
+          </div>
+           <br><hr>
+          <!-- <div>
+           <label class="form-label">Gender</label>
+            <select  name="gender">
+              <option  value="male">Male</option>
+              <option  value="female">Female</option>
+              <option  value="others">Not Interested</option>
+            </select> 
+          </div> 
+          <br><hr> -->
+          <div>
+          <label class="form-label">Message</label>
+          <textarea  name="message"   rows="3" cols="25" placeholder="Write here.."></textarea>
+        </div>
+         <br>
+            <button type="submit"  class="submit btn-xl btn-dark">submit</button>
+          </form>
+     
+        </div>
+      </div>
+        </section>
+
+
+<%-include("footer")%>

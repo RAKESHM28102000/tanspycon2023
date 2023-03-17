@@ -1,0 +1,623 @@
+a{
+    text-decoration:none ;
+}
+/*navbar section*/
+.navbar{
+    background-color: rgb(85, 85, 85) !important;
+    border-color: rgb(89, 89, 89);
+    border-width:2px;
+    border-style: groove;
+    text-align: center;
+    position:sticky;
+    top:0;
+    left:0;
+    z-index: 100;
+    padding: .2rem 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0,0,.3);
+}
+.navbar .navbar-brand{
+    font-size:25px !important;
+    font-weight:500;
+    color:#ffffff !important;
+    padding-top:3px;
+}
+.navbarBrandimage{
+    border-radius:50%;
+    margin: auto;
+    margin-right:5%;
+
+}
+#navbarSupportedContent a{
+   color: rgb(44, 44, 44);
+   font-size:20px !important;
+   border-bottom: 3px solid transparent;
+   margin:10px;
+   background-color: rgb(240, 242, 241);
+   border-radius:7%;
+}
+#navbarSupportedContent a:hover{
+    border-bottom:4px solid rgb(94, 224, 0);
+}
+#navbarSupportedContent button{
+    border-radius:7%;
+    margin: 2px;
+}
+
+#navbarSupportedContent .dropdown-item{
+    border-radius:7%;
+    width:80%;
+    background-color: #4d4d4d;
+    color:#e5e5e5
+}
+ #navbarSupportedContent button a{
+   text-decoration:none;
+   background-color:#4d4d4d;
+   color:#e5e5e5;
+   font-size: 20px;
+ 
+ }
+ /*section*/
+ section{
+    width:100%;
+    min-height:100vh;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: center;
+
+ }
+ /* home section*/
+ #home{
+    background-image: url("/images/IMG-20230314-WA0012.jpg");
+    background-size:cover;
+    background-position:center;
+    text-align:center;
+    min-height:100vh;
+ }
+ #home h1{
+    /* background-color: rgb(245, 245, 245) !important;
+    border: 3px  solid #676767;
+    border-radius:10%;
+    box-shadow:15px 20px 20px rgba(0,0,0,.3),
+                inset 5px 5px 15px rgb(89, 89, 89); */
+    font-size:70px;
+    font-weight:700;
+    text-align: center;
+    color: #ffffff;
+    font-family:"fantasy";
+    margin:30px;
+   
+    letter-spacing:2px;
+    text-shadow: 0px 1px 0px #ccc,
+                 0px 2px 0px #ccc,
+                 0px 3px 0px #ccc,
+                 0px 4px 0px #ccc,
+                 0px 5px 0px #ccc,
+                 0px 6px 0px #ccc,
+                 0px 7px 0px #ccc;
+ }
+
+ #home p{
+    margin:20px;
+    /* background-color: rgb(255, 255, 255) !important;
+    border-radius:7%;
+    border:3px solid #454545;
+    box-shadow:15px 20px 20px rgba(0, 0,0, .3),
+                inset 5px 5px 15px rgb(64, 64, 64); */
+    font-size:60px;
+    text-align:center;
+    padding: auto;
+    color:  #ffffff;
+    font-family:"fantasy";
+    letter-spacing:2px;
+    text-shadow: 0px 1px 0px #ccc,
+                 0px 2px 0px #ccc,
+                 0px 3px 0px #ccc,
+                 0px 4px 0px #ccc,
+                 0px 5px 0px #ccc,
+                 0px 6px 0px #ccc,
+                 0px 7px 0px #ccc;
+ }
+.homeh1:hover{
+    box-shadow: inset 5px 5px 10px rgba(255, 255, 255, 0.3),
+                 inset -4px -4px 10px rgb(38, 38, 38);
+    transition: .2s;
+}
+.homep:hover{
+    box-shadow: inset 5px 5px 10px rgba(255, 255, 255, 0.3),
+                 inset -4px -4px 10px rgb(38, 38, 38);
+    transition: .2s;
+}
+ #home .input-group{
+   width: 55%;
+    position: relative;
+    left:200px;
+    text-align: center;
+    
+ }
+
+ .signin{
+    background-color: #14360d !important;
+    color: #1b1a1a !important;
+    box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+   
+ }
+ /* about section*/
+ #about{
+    background-color: #ffffff;
+    
+ }
+ #about h1{
+        padding:20px;
+       color: #323232;
+       margin:20px;
+       font-size:40px;
+       font-weight:400;
+       font-family:"fantasy";   
+       box-shadow:15px 20px 20px rgba(0,0,0,.3),
+       inset 5px 5px 15px rgb(89, 89, 89);
+ }
+ #about p{
+    color: #363636;
+    padding:20px !important;
+    font-size:20px;
+    font-weight:300;
+    font-family:"fantasy";
+    line-height:1.5;
+    letter-spacing:2px;
+    text-align: left;
+    /* margin: left 10px; */
+    box-shadow:15px 20px 20px rgba(0,0,0,.3),
+    inset 5px 5px 15px rgb(89, 89, 89);
+    
+}
+#about .imageInAbout {
+   width:100%;
+   height:80%;
+   border-radius:30%;
+   border: solid #676767 5px ;
+   box-shadow:15px 20px 20px rgba(0, 0,0, .3);
+   margin-right:10px;
+   margin-top:70px;
+}
+.about-button{
+  
+    background-color:  rgb(255, 255, 255)!important;
+    color: #555555 !important;
+    box-shadow: 2px 4px 5px rgba(0,0,0,.3);
+   
+ }
+ /*feed section*/
+#feed{
+    background-color: rgb(254, 254, 254) !important;
+}
+#feed h1{
+    font-size:25px;
+    font-family:"fantasy";
+    padding: 10px 5px;
+    /* background-color: #555555;
+    color:#ccc; */
+   font-weight: bolder;}
+#feed p{
+        font-size:20px;
+        font-family:"fantasy";
+        padding:5px 5px;
+    }
+.cardInFeed{
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    align-items:center;
+}
+.card img{
+    border-radius:5%;
+    border: 2px solid black;
+}
+ .card{
+    width:80%;
+    height:100%;
+    background-color: #e5e5e5 !important;
+    border:3px solid rgb(66, 66, 66) !important;
+    box-shadow:15px 20px 20px rgba(0, 0,0, .3),
+                inset 4px 4px 10px white;
+    border-radius:10px !important;
+    overflow: hidden;
+    justify-content:center;
+    align-items: center;
+    margin:20px 60px;
+    transition: .2s;
+}
+.card p{
+    text-align: left;
+}
+.card:hover{
+    box-shadow: inset 5px 5px 10px rgba(0, 0,0, .3),
+                 inset -4px -4px 10px white;
+    transition: .2s;
+}
+
+
+/*form*/
+.form-class{
+    display: flex;
+    justify-content: center;
+}
+.form{
+    font-size:30px;
+    padding:50px;
+    width:50%;
+    background-color: #676767;
+}
+.form-label{
+    padding:5px;
+    width: auto;
+    text-align: left;
+    display: block;
+}
+.form input[type="none"]{
+	padding:5px;
+	width:auto;
+    text-align:left;
+
+}
+.form input[type="submit"]{
+	padding:5px;
+	background-color:rgb(36, 14, 14);
+	color: rgb(255, 255, 255);
+	border: none;
+    font-size:20px;
+
+}
+.submit {
+    padding:5px;
+    color: rgb(255, 255, 255);
+    font-size:40px;
+    font-weight:500;
+    border-radius:10%;
+    background-color: #4d4d4d;
+    width:40%; 
+}
+
+/*contact section*/ 
+#contact{
+    width:100%;
+    min-height:60vh;
+    margin:10px;
+    background-color:#e5e5e5;
+}
+.footerClass{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    flex-wrap: wrap;
+    gap:20px;
+}
+.footerClass p{
+    font-size: 30px;
+    margin:10px;
+}
+.address{
+    font-size: 30px;
+    margin:10px;
+
+}
+
+.footer{
+    display: flex;
+    justify-content:center;
+    padding: 20px;
+    background-color: #e5e5e5;
+}
+
+/*animate section*/
+.pressed {
+    box-shadow: 0 0 20px white;
+    background-color: grey;
+  }
+  /* this is for small phone....... */
+
+  @media(max-width:1028px){
+    
+    .navbar .navbar-brand{
+        font-size:20px !important;
+        font-weight:300;
+       
+    }
+    #navbarSupportedContent a{
+      font-size:10px !important;
+    
+    }
+    #navbarSupportedContent a:hover{
+        border-bottom:2px solid rgb(255, 0, 0);
+    }
+    #navbarSupportedContent button{
+        border-radius:4%;
+        margin:2px;
+    }
+    
+    #navbarSupportedContent .dropdown-item{
+        border-radius:3%;
+        width:80%;
+       
+    }
+     #navbarSupportedContent button a{
+       text-decoration:none;
+       font-size:15px;
+     
+     }
+     /*section*/
+    
+     /* home section*/
+     #home h1{
+        font-size:40px;
+        font-weight:700;
+        margin:30px;
+        margin-top:80px;
+        letter-spacing:2px;
+        text-shadow:none;
+     }
+    
+     #home p{
+        margin:10px;
+        font-size:15px;
+        font-weight:700;
+        text-shadow:none;
+       
+     }
+    .homeh1:hover{
+        box-shadow:none;
+    }
+    .homep:hover{
+        box-shadow:none;
+    }
+     /* about section*/
+     #about{
+        background-color: #ffffff;
+        
+     }
+     #about h1{
+           padding:10px;
+           margin-top:20px;
+           margin-bottom:20px;
+           font-size:30px;
+           font-weight:700;
+           box-shadow:15px 20px 20px rgba(0,0,0,.3),
+           inset 5px 5px 15px rgb(89, 89, 89);
+     }
+     #about p{
+        color: #363636;
+        padding:10px !important;
+        font-size:20px;
+        font-weight:300;
+        font-family:"fantasy";
+        line-height:1.5;
+        letter-spacing:1px;
+        text-align:left;
+        box-shadow:15px 20px 20px rgba(0,0,0,.3),
+        inset 5px 5px 15px rgb(89, 89, 89);
+        
+    }
+    #about .imageInAbout {
+       border-radius:20%;
+       border: solid #ffffff 5px ;
+       box-shadow:10px 15px 10px rgba(0, 0,0, .3);
+       margin-right:10px;
+       margin-top:50px;
+    }
+     /*feed section*/
+    #feed{
+        background-color: rgb(254, 254, 254) !important;
+    }
+    #feed h1{
+        font-size:20px;}
+    #feed p{
+            font-size:18px;
+        }
+    .cardInFeed{
+        display: flex;
+        flex-direction: column;
+        justify-content:flex-start;
+        align-items:center;
+    }
+   
+    
+    /*form*/
+    .form-class{
+        display: flex;
+        justify-content:center;
+    }
+    .form{
+        font-size:15px;
+        padding:30px;
+        width:90%;
+        background-color: #676767;
+    }
+    .form-label{
+        padding:3px;
+    }
+    .form input[type="none"]{
+        padding:3px;
+    
+    }
+    .form input[type="submit"]{
+        padding:3px;
+        background-color:rgb(36, 14, 14);
+        color: rgb(255, 255, 255);
+        border: none;
+        font-size:15px;
+    
+    }
+    .submit {
+        padding:3px;
+        color: rgb(255, 255, 255);
+        font-size:15px;
+        font-weight:500;
+        border-radius:10%;
+        background-color: #4d4d4d;
+        width:50%; 
+    }
+    /* card section */
+    .card{
+        width:80%;
+        height:100%;
+        background-color: #e5e5e5 !important;
+        border:3px solid rgb(66, 66, 66) !important;
+        box-shadow:15px 20px 20px rgba(0, 0,0, .3),
+                    inset 4px 4px 10px white;
+        border-radius:10px !important;
+        overflow: hidden;
+        justify-content:center;
+        align-items: center;
+        margin:20px 60px;
+        transition: .2s;
+    }    
+    /*contact section*/ 
+  
+    .footerClass p{
+        font-size:20px;
+        margin:10px;
+    }
+    .address{
+        font-size:20px;
+        margin:10px;
+    
+    }
+    
+    .footer{
+        display: flex;
+        justify-content:center;
+        padding:15px;
+        background-color: #e5e5e5;
+    }
+    
+    /*animate section*/
+    .pressed {
+        box-shadow: 0 0 20px white;
+        background-color: grey;
+      }
+   
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  }
+   
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+    .gfg-div {
+      background-color: #63c971;
+      color: #fff;
+    }
+  }
+   
+  /* For Tablet View */
+  @media screen and (min-device-width: 768px)
+  and (max-device-width: 1024px) {
+    .gfg-div {
+      width: 400px;
+      height: 400px;
+      background-color: orange;
+      color: black;
+    }
+  }
+   
+  /* For Mobile Portrait View */
+  @media screen and (max-device-width: 480px)
+  and (orientation: portrait) {
+    .gfg-div {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      color: #fff;
+    }
+  }
+   
+  /* For Mobile Landscape View */
+  @media screen and (max-device-width: 640px)
+  and (orientation: landscape) {
+    .gfg-div {
+      width: 400px;
+      height: 200px;
+      background-color: cyan;
+      color: black;
+    }
+  }
+   
+  /* For Mobile Phones Portrait or Landscape View */
+  @media screen and (max-device-width: 640px) {
+    .gfg-div {
+      width: 400px;
+      height: 200px;
+      background-color: chartreuse;
+      color: black;
+    }
+  }
+   
+  /* For iPhone 4 Portrait or Landscape View */
+  @media screen and (min-device-width: 320px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .gfg-div {
+      width: 400px;
+      height: 400px;
+      background-color: brown;
+      color: black;
+    }
+  }
+   
+  /* For iPhone 5 Portrait or Landscape View */
+  @media (device-height: 568px) and (device-width: 320px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .gfg-div {
+      width: 400px;
+      height: 400px;
+      background-color: cornflowerblue;
+      color: black;
+    }
+  }
+   
+  /* For iPhone 6 and 6 plus Portrait or Landscape View */
+  @media (min-device-height: 667px) and (min-device-width: 375px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .gfg-div {
+      width: 400px;
+      height: 400px;
+      background-color: darkgoldenrod;
+      color: black;
+    }
+}
+  
