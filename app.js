@@ -5,8 +5,8 @@ const bodyParser=require("body-parser");
 const ejs=require("ejs");
 const mongoose=require("mongoose");
 const _ =require("lodash");
-// const bcrypt=require("bcrypt");
-// const saltRounds=10;
+const bcrypt=require("bcrypt");
+const saltRounds=10;
 
 const app=express();
 //mongoose.connect("mongodb://localhost:27017/todolistDB",{useNewUrlParser:true});
@@ -75,9 +75,9 @@ app.get("/form",function(req,res){
 app.get("/contact",function(req,res){
     res.render('contact');
 });
-app.get("/login",function(req,res){
-    res.render('contact');
-});
+// app.get("/login",function(req,res){
+//     res.render('contact');
+// });
 // to create a blog
 app.post("/form",function(req,res){
   
@@ -101,6 +101,100 @@ app.post("/form",function(req,res){
     });
   
 });
+// this section for login and register and for to get contact details:
+// //schema for model/collection/table created
+const loginSchema=new mongoose.Schema({
+    email:{ type: String, required:  true },
+    password:{ type: String, required:  true }
+});
+
+
+
+const Login=new mongoose.model("Login",loginSchema);
+
+// defaultItem=["no items","the form is empty","kindly fill the form"]
+
+app.get("/secret",function(req,res){
+    User.find({},function(err,foundeditems){
+        res.render("secret", {keyfordata:"details of student", keyforuser:foundeditems});
+    });
+ 
+        // using model.find() to find all
+    //      User.find({},function(err,foundeditems){
+    //     if (foundeditems.length===0){
+    //       Item.insertMany(defaultItem,function(err){
+    //         if (err){
+    //           console.log("err")
+    //         }
+    //         else{
+    //           console.log("success saved in mongodb");
+    //         }
+    //       }); 
+    //       res.redirect("/login");
+    //     }
+    //     else{
+    //       res.render("secret", {keyfordata:"details of student", keyforuser:foundeditems});
+    //     }
+    //    });
+ });
+      
+
+app.get("/login",function(req,res){
+    res.render("login");
+});
+app.get("/logout",function(req,res){
+    res.redirect("/login");
+});
+
+app.post("/login",function(req,res){
+   const email=req.body.username;
+   const password=req.body.password;
+    Login.findOne({email:email},function(err,foundedUser){
+        if(err){
+            console.log(err);}
+        else{
+            if(foundedUser){
+                bcrypt.compare(password ,foundedUser.password,function(err,result){
+                 if(result===true){
+                    User.find({},function(err,foundeditems){
+                        res.render("secret", {keyfordata:"details of student", keyforuser:foundeditems});
+                    });
+                 }
+                 });
+             }  
+        }
+    });
+});
+// this is register part
+app.get("/register",function(req,res){
+    res.render("register");
+});
+
+app.post("/register",function(req,res){
+    const registeredPassword=req.body.password ;
+    bcrypt.hash(registeredPassword, saltRounds ,function(err,hash){
+        const newLogin = new Login({
+            email:req.body.username,
+            password:hash
+         });
+         
+      newLogin.save(function(err){
+        if(err){
+            console.log(err);
+        }
+        else{
+        //  console.log(md5("123456"));
+            res.render("secrets")
+        }
+     })
+    });
+   
+});
+// app.get("/submit",function(req,res){
+//     res.render("submit");
+// });
+
+
 
 
         
@@ -115,71 +209,4 @@ app.listen(port,function(req,res){
     console.log('port server is'+port);
 });
 
-
-// //schema for model/collection/table created
-// const loginSchema=new mongoose.Schema({
-//     email:String,
-//     password:String
-// });
-
-
-
-// const Login=new mongoose.model("Login",loginSchema);
-
-
-// app.get("/homesecret",function(req,res){
-//     res.render("secret");
-// });
-// app.get("/login",function(req,res){
-//     res.render("login");
-// });
-// app.get("/logout",function(req,res){
-//     res.redirect("/");
-// });
-
-// app.post("/login",function(req,res){
-//    const email=req.body.username;
-//    const password=req.body.password;
-//     Login.findOne({email:email},function(err,foundedUser){
-//         if(err){
-//             console.log(err);}
-//         else{
-//             if(foundedUser){
-//                 bcrypt.compare(password ,foundedUser.password,function(err,result){
-//                  if(result===true){
-//                      res.render("secrets");
-//                  }
-//                  });
-//              }  
-//         }
-//     });
-// });
-// // this is register part
-// app.get("/register",function(req,res){
-//     res.render("register");
-// });
-
-// app.post("/register",function(req,res){
-//     const registeredPassword=req.body.password ;
-//     bcrypt.hash(registeredPassword, saltRounds ,function(err,hash){
-//         const newLogin = new Login({
-//             email:req.body.username,
-//             password:hash
-//          });
-         
-//       newLogin.save(function(err){
-//         if(err){
-//             console.log(err);
-//         }
-//         else{
-//          console.log(md5("123456"));
-//             res.render("secrets")
-//         }
-//      })
-//     });
-   
-// });
-// app.get("/submit",function(req,res){
-//     res.render("submit");
-// });
 
