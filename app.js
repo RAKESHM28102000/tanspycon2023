@@ -39,7 +39,7 @@ const userSchema = new Schema({
   email:{ type: String, required:  true },
   mobileno:{ type: Number, required:true ,min: [7, 'Must be at least 7, got {VALUE}']},
   college:{ type: String, required: true },
-  message:{ type: String, required:true,min: [1, 'Must be at least 1, got {VALUE}'] }
+//   message:{ type: String, required:true,min: [1, 'Must be at least 1, got {VALUE}'] }
 }, {
   timestamps: true,
 });
@@ -86,7 +86,7 @@ app.post("/form",function(req,res){
         lastname:req.body.lastname,
         email:req.body.email,
         mobileno:req.body.mobileno,
-        message:req.body.message,
+        // message:req.body.message,
         college:req.body.college
     });
     newUser.save(function(err){

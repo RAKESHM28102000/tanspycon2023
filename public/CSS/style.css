@@ -308,7 +308,26 @@ a{
     padding: 20px;
     background-color: #e5e5e5;
 }
+#features{
+    display: flex;
+    background: #ffffff;
+    text-align: center;
 
+}
+.featureclass{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:5;
+    flex-wrap: wrap;
+}
+.featureclass1{
+    margin:50px;
+}
+.featureclass1 h3 {
+    margin:20px 2px;
+    
+}
 /*animate section*/
 .pressed {
     box-shadow: 0 0 20px white;
@@ -516,6 +535,7 @@ a{
 #cardInsecret  h3{
    font-size:10px;
 }
+
    
     
     /*animate section*/
