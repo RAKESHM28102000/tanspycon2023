@@ -214,7 +214,7 @@ a{
     border: 2px solid black;
 }
  .card{
-    width:80%;
+    width:92%;
     height:100%;
     background-color: #e5e5e5 !important;
     border:3px solid rgb(66, 66, 66) !important;
@@ -224,7 +224,7 @@ a{
     overflow: hidden;
     justify-content:center;
     align-items: center;
-    margin:20px 60px;
+    margin:20px;
     transition: .2s;
 }
 .card p{
@@ -478,7 +478,7 @@ a{
     }
     /* card section */
     .card{
-        width:80%;
+        width:92%;
         height:100%;
         background-color: #e5e5e5 !important;
         border:3px solid rgb(66, 66, 66) !important;
@@ -488,7 +488,7 @@ a{
         overflow: hidden;
         justify-content:center;
         align-items: center;
-        margin:20px 60px;
+        margin:10px;
         transition: .2s;
     }    
     /*contact section*/ 
