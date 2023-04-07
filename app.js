@@ -75,6 +75,9 @@ app.get("/form",function(req,res){
 app.get("/contact",function(req,res){
     res.render('contact');
 });
+app.get("/table",function(req,res){
+    res.render('table');
+});
 // app.get("/login",function(req,res){
 //     res.render('contact');
 // });
