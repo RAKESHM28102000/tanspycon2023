@@ -99,7 +99,7 @@ app.post("/form",function(req,res){
         }
         else{
             console.log(err);
-            res.render('post',{keyforerr:"check the form again! invalid input",err:err});
+            res.render('post',{keyforerr:"Check the form again! invalid input",err:err.message});
         }
     });
   
